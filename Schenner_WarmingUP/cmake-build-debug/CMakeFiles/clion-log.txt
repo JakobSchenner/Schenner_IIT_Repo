@@ -1,4 +1,0 @@
-"C:\Program Files\JetBrains\CLion 2018.3.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" D:\Schule\4BHIT\SYT\IIT\Schenner_IIT_Repository\Schenner_IIT_Repo\Schenner_WarmingUP
--- Configuring done
--- Generating done
--- Build files have been written to: D:/Schule/4BHIT/SYT/IIT/Schenner_IIT_Repository/Schenner_IIT_Repo/Schenner_WarmingUP/cmake-build-debug
