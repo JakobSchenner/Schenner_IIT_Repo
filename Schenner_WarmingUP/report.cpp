@@ -122,9 +122,9 @@ bool reportReport(){
 
     }
 
-    std::cout << "Lines: " << lines << "\n";
+    std::cout << "Number of counted Lines: " << lines << "\n";
 
-    std::cout << "\nBrowser: \n";
+    std::cout << "\nList of Browsers found: \n";
     std::map<std::string, int>::iterator it = mapOfBrowser.begin();
     while(it != mapOfBrowser.end())
     {
@@ -132,7 +132,15 @@ bool reportReport(){
         it++;
     }
 
-    std::cout << "\nHTTP Method: \n";
+    std::cout << "\nList of Operating Systems found: \n";
+    it = mapOfOS.begin();
+    while(it != mapOfOS.end())
+    {
+        std::cout << "\t" <<it->first<<": "<<it->second<<std::endl;
+        it++;
+    }
+
+    std::cout << "\nHTTP GET/POST Method: \n";
     it = mapOfMethod.begin();
     while(it != mapOfMethod.end())
     {
@@ -140,13 +148,7 @@ bool reportReport(){
         it++;
     }
 
-    std::cout << "\nOS: \n";
-    it = mapOfOS.begin();
-    while(it != mapOfOS.end())
-    {
-        std::cout << "\t" <<it->first<<": "<<it->second<<std::endl;
-        it++;
-    }
+
     return true;
 }
 
