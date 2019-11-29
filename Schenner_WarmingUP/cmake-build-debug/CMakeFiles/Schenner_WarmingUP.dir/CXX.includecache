@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/Schule/4BHIT/SYT/IIT/Schenner_IIT_Repository/Schenner_IIT_Repo/Schenner_WarmingUP/main.cpp
+iostream
+-
+cstring
+-
+report.h
+D:/Schule/4BHIT/SYT/IIT/Schenner_IIT_Repository/Schenner_IIT_Repo/Schenner_WarmingUP/report.h
+
+D:/Schule/4BHIT/SYT/IIT/Schenner_IIT_Repository/Schenner_IIT_Repo/Schenner_WarmingUP/report.h
+
