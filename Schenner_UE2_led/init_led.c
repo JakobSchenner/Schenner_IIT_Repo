@@ -13,7 +13,7 @@ int GPIOExport(int pin){
 
     fd = open("/sys/class/gpio/export", O_WRONLY);
     if (-1 == fd){
-        fprintf(stderr, "Failed to opern export for writing!\n");
+        fprintf(stderr, "Failed to open export for writing!\n");
         return (-1);
     }
 
@@ -30,7 +30,7 @@ int GPIOUnexport(int pin){
 
     fd = open("/sys/class/gpio/unexport", O_WRONLY);
     if (-1 == fd){
-        printf(stderr, "Failed to open unexport for writing!\n");
+        printf((const char *) stderr, "Failed to open unexport for writing!\n");
         return (-1);
     }
 
@@ -79,7 +79,7 @@ int GPIORead(int pin){
     }
 
     close(fd);
-    return (atoi(value_str));
+    return atoi(value_str);
 }
 
 int GPIOWrite(int pin, int value){
