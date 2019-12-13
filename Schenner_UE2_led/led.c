@@ -19,11 +19,13 @@ int ledBlinkAll20(){
 
 
     while (repeat<1000000){
-        fprintf((FILE *) "echo %d > /sys/class/gpio/gpio%d/value", (const char *) HIGH, POUT4);
-        fprintf((FILE *) "echo %d > /sys/class/gpio/gpio%d/value", (const char *) HIGH, POUT17);
+        if ((-1 == GPIOWrite(POUT4, HIGH))||(-1 == GPIOWrite(POUT17, HIGH))){
+            return (3);
+        }
         usleep(25000);
-        fprintf((FILE *) "echo %d > /sys/class/gpio/gpio%d/value", (const char *) LOW, POUT4);
-        fprintf((FILE *) "echo %d > /sys/class/gpio/gpio%d/value", (const char *) LOW, POUT17);
+        if ((-1 == GPIOWrite(POUT4, LOW))||(-1 == GPIOWrite(POUT17, LOW))){
+            return (4);
+        }
         usleep(25000);
         repeat++;
     }
@@ -37,7 +39,7 @@ int ledBlinkAll20(){
     }while(repeat --);
     */
     if (-1 == GPIOUnexport(POUT4) || -1 == GPIOUnexport(POUT17)){
-        return (4);
+        return (5);
     }
 
     return 0;
