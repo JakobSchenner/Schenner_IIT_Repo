@@ -22,8 +22,8 @@ int ledBlinkAll20(){
         fprintf((FILE *) "echo %d > /sys/class/gpio/gpio%d/value", (const char *) HIGH, POUT4);
         fprintf((FILE *) "echo %d > /sys/class/gpio/gpio%d/value", (const char *) HIGH, POUT17);
         usleep(25000);
-        fprintf((FILE *) "echo %d > /sys/class/gpio/gpio%d/value", LOW, POUT4);
-        fprintf((FILE *) "echo %d > /sys/class/gpio/gpio%d/value", LOW, POUT17);
+        fprintf((FILE *) "echo %d > /sys/class/gpio/gpio%d/value", (const char *) LOW, POUT4);
+        fprintf((FILE *) "echo %d > /sys/class/gpio/gpio%d/value", (const char *) LOW, POUT17);
         usleep(25000);
         repeat++;
     }
