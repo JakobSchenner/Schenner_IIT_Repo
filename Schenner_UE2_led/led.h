@@ -17,9 +17,6 @@ Created on: 29.11.2019
 #define POUT4 4 /*Pin 7*/
 #define POUT17 17 /*Pin 11*/
 
-#define BUFFER_MAX 3
-#define DIRECTION_MAX 35
-#define VALUE_MAX 30
 
 #include <sys/stat.h>
 #include <sys/types.h>
