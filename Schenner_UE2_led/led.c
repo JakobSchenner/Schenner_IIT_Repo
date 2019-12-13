@@ -18,7 +18,7 @@ int ledBlinkAll20(){
     }
 
 
-    while (repeat<1000000){
+    while (repeat<30000){
         if ((-1 == GPIOWrite(POUT4, HIGH))||(-1 == GPIOWrite(POUT17, HIGH))){
             return (3);
         }
