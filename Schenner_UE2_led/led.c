@@ -30,14 +30,6 @@ int ledBlinkAll20(){
         repeat++;
     }
 
-   /* do{
-
-        if ((-1 == GPIOWrite(POUT4, repeat % 2))||(-1 == GPIOWrite(POUT17, repeat % 2))){
-            return (3);
-        }
-        usleep(500 * 1000);
-    }while(repeat --);
-    */
     if (-1 == GPIOUnexport(POUT4) || -1 == GPIOUnexport(POUT17)){
         return (5);
     }
